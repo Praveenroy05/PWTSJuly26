@@ -107,9 +107,63 @@
          
          // Assignment 5-8 
          // 5. Greater than (>)
-         console.log(10 > 40 );
+         console.log(10 > 4 );
+
+    console.log("***************************************************");
+    
+
+    // 3. Logical Operator - Used to combine multiple condition to get the final result.
+    // It will compare 2 expression and return us the result in the form of boolean.
+
+        // 1. AND (&&)  - Both of the conditions are true then only it will return us true
+        // 2. OR (||)   - Either of the condition is true - it will return us true
+        // 3. NOT (!) - It will reverse the result from true to false and vice-versa
+
+
+        // 1. AND (&&)
+
+        // true && true - true
+        // true && false - false
+        // false && true - false
+        // false && false - false
+
+        console.log((10 >5) && (20>6)) // true
+        console.log((10 >5) && (20>60)) // false
+        console.log((10 >50) && (20>6)) // false
+        console.log((10 >50) && (20>60)) // false
+        
+    // 2. OR (||)
+
+        // true || true - true
+        // true || false - true
+        // false || true - true
+        // false || false - false
+
+        console.log((10 >5) || (20>6)) // true
+        console.log((10 >5) || (20>60)) // true
+        console.log((10 >50) || (20>6)) // true
+        console.log((10 >50) || (20>60)) // false
+
+    // 3. NOT(!)
+    console.log( !(10> 60));
+
+
+    let month = "May"
+    let year = "2027"
+    let day = "5"
+
+    let monthText = "July"
+    let yearText = "2026"
+
+    while(!((month == monthText) && (year == yearText))){
+        console.log("Month and year are matching");
+        break
+    }
+    
          
-         
+    // 4. Assignment Operator (=)     - Assign the value to a variable
+    
+    let i = 10 
 
 
         
