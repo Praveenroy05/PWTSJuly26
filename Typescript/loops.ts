@@ -112,3 +112,38 @@ while(condition)
 // 10 to 0 - 10 8 6 4 2 0  - using while loop
 
 */
+
+
+let attempt = 0 // <=3, >=3, >3 
+
+while(attempt <=3){ // 0 <=3
+    console.log("Attempt = " +attempt);
+    attempt++;
+}
+
+console.log("Your account have been locked for 24H");
+
+console.log("*****************************************************")
+
+// 3. do while loop
+
+// syntax:
+
+/*
+
+initialization - let k = 1
+
+do
+{
+   // code to be executed
+}while(condition);
+
+
+*/
+
+let k = 0
+
+do{
+    console.log("Attempt = ", k);
+    k++ 
+}while(k <=3);
