@@ -119,4 +119,3 @@ console.log(lang3)
 console.log(var10);
 
 var var10
-
