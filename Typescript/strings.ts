@@ -116,6 +116,17 @@
     // Object
     // Class - Inheritance
     // Framework
+
+
+    // 1. node js
+    // 2. VS code
+    // 3. Typescript
+    // 4. tsx
+    // 5. playwright - npm init playwright
+    // 6. xlsx
+    // 7. allure-report
+
+
     
     
     
