@@ -19,6 +19,12 @@ parralel mode but not the test case inside the file
 4. fullyParallel = true and workers > 1 - The TEST CASE insside the file will run 
 in the parallel mode but not the test file
 
+
+fileName.spec.ts
+fileName.test.ts
+
+
+
 */
 
 /**
@@ -33,7 +39,7 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 2 : 5,
+  workers: process.env.CI ? 2 : 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -45,7 +51,7 @@ export default defineConfig({
     trace: 'on',
     screenshot: 'on',
     video : 'on',
-    //headless : false
+    headless : false
   },
 
   /* Configure projects for major browsers */
