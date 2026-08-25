@@ -206,8 +206,7 @@ count(//th[text()='CPU (%)']/preceding-sibling::th) - 4
 
 //tr[td[text()='Chrome']]/td[count(//th[text()='CPU (%)']/preceding-sibling::th)+1]
 
-
-
+//td[text()='Chrome']/following-sibling::td[count(//th[text()='CPU (%)']/preceding-sibling::th)]
 
 Note: Whenever you write a locator by using CSS Selector or XPATH, we will use:
 page.locator("css selector or xpath")
