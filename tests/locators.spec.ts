@@ -187,11 +187,45 @@ id = name453656
 
 // Identify the current element and all the parent elements (ancestor)
 
+table
+tbody - Table body
+thead - Table Header
+tr - Table Row
+td - Table Definition (Column)
+
+
+1. Identify the row that you are trying to write the locator
+
+//tr[td[text()='Chrome']]/td
+
+2. Count the preceding-sibling are available before the CPU % column
+
+count(//th[text()='CPU (%)']/preceding-sibling::th) - 4
+
+3. Increase the count by 1 to reach to the CPU % column
+
+//tr[td[text()='Chrome']]/td[count(//th[text()='CPU (%)']/preceding-sibling::th)+1]
+
+
+
+
+Note: Whenever you write a locator by using CSS Selector or XPATH, we will use:
+page.locator("css selector or xpath")
 
 
 
 
 3. Playwright getBy Locators
+
+1. page.getByRole()
+2. page.getByText()
+3. page.getByLabel()
+4. page.getByPlaceholder()
+5. page.getByAltText()
+6. page.getByTitle()
+7. page.getByTestId() - data-testid
+
+
 
     
 
