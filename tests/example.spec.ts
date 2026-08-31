@@ -10,11 +10,12 @@ test("Title",  async function({page}){
   // Validate if the logout button is displaying or not
 
   await page.goto("https://practicetestautomation.com/practice-test-login/")
-  await page.locator("#username").fill("student")
-  await page.locator("#password").fill("password123")
+  await page.getByLabel("Username").fill("student")
+  await page.locator("#password").fill("Password123")
   await page.locator("#submit").click()
   await expect(page.getByRole("button", {name: "Log out"})).toBeVisible()
-
+  // page.getByRole("combobox - select")
+  // page.getByRole("option - div", {name:"abc"})
 
 
   // Promise is an object - pending, successful, rejected

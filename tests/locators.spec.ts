@@ -226,8 +226,74 @@ page.locator("css selector or xpath")
 
 
 
+page.getByRole() to locate by explicit and implicit accessibility attributes.
+page.getByText() to locate by text content.
+page.getByLabel() to locate a form control by associated label's text.
+page.getByPlaceholder() to locate an input by placeholder.
+page.getByAltText() to locate an element, usually image, by its text alternative.
+page.getByTitle() to locate an element by its title attribute.
+page.getByTestId() to locate an element based on its data-testid attribute (other attributes can be configured).
     
+1. page.getByRole() - 
+
+Heading - <h1-h6> - role - heading
+button - <button> or class="btn" - role - button
+textbox - <input> or <textarea> - role - textbox
+radio - type = 'radio' - role - radio
+checkbox - type= "checkbox" - role- checkbox
+link - <a> - role - link
+
+page.getByRole("checbox", {name:"Sports"})
 
 
+2. page.getByText() - page.getByText("Test login")
+
+    1. <p>Email</p>
+    2. <span>Emails</span>
+    3. <span>Email-ID</span>
+
+page.getByText('Email') - This will identify all the above 3 elements
+page.getByText("Email", {exact:true}) - This will identify only the first element
+
+
+3. page.getByLabel()
+
+    1. When you have "for" as an attribute for an element that have been developed using <label> - 
+    THere we can directly use page.getBylabel("label text")
+    2. When you find out <input> inside the <label> - 
+    <label class="abcd" <input....>> Tuesday</label>
+
+4. page.getByPlaceholder() - To locate an input field by using "placeholder" as an attribute
+
+    page.getByPlaceholder("Enter Name")
+
+5. page.getByAltText() - To locate an element usually image, 
+by its text alternative. ("alt" as an attribute)
+
+page.getByAltText("logo image")
+
+6. page.getByTitle() - To locate an element by its "title" attribute
+
+<a href="#" title="Home page link">Home</a>
+
+page.getByTitle("Home page link")
+
+7. page.getByTestId() - To locate an element based on its "data-testid" attribute.
+
+<button data-testid="edit-profile-btn">Edit Profile</button>
+
+page.getByTestId("edit-profile-btn")
+
+
+
+
+On regular basis we will be using the below locators:
+
+1. page.getByRole()
+2. page.getByText()
+3. page.getByPlaceholder()
+4. page.getByTestId() - data-testid
+
+codegen  - Code Generation - automatic locator
 
 */
