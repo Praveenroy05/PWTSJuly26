@@ -56,3 +56,71 @@ test("Login into application using valid credentials", async ({page})=>{
 
 
 })
+
+
+// Select radio/checkbox
+
+test("Handling radio button and checkbox", async ({page})=>{
+    await page.goto("https://testautomationpractice.blogspot.com/")
+
+    // click() - Click on an element
+    // check() - It validates if the element is already checked/selected,
+    // if it is not selected then only it click on an element. Only work for
+    // radio button or checkbox
+
+    // uncheck() - It validates if the element is not already checked/selected,
+    // if it is selected then only it click on an element. Only work for
+    // radio button or checkbox
+
+    const radioBtn = page.getByRole('radio', {name:'Female'})
+
+    await radioBtn.check()
+
+    // toBeChecked() - Which validates if the radio button or checkbox is checked or not
+
+    await expect(radioBtn).toBeChecked()
+
+    const checbox = page.getByRole('checkbox', {name:'Monday'})
+    await expect(checbox).not.toBeChecked()
+
+    // await checbox.check()
+
+    // await expect(checbox).toBeChecked()
+
+    await checbox.uncheck()
+
+    await expect(checbox).not.toBeChecked()
+
+
+    //  Write a logic to check all the checkbox
+
+})
+
+// Get the text value of an element and multiple elements
+
+// drop down - India
+
+test("Get the text from an element", async ({page})=>{
+    await page.goto("https://testautomationpractice.blogspot.com/")
+
+    // textContent() - return the text value from the matching element even if 
+    // the element is not visible on the page
+    // innerText() - return the text value from the matching element from only 
+    // the visible element on the page 
+
+    const text = await page.locator("h1.title").textContent()
+    console.log(text)
+    
+    // Get the text value from multiple elements
+
+    // allTextContents()
+    // allInnerTexts()
+
+    // Note: Whenever you write a locator which is matching 
+    // with multiple element on the webpage, the auto waiting 
+    // concept doesnot apply for those locators.
+
+    const allTexts = await page.locator("h2.title").allInnerTexts()
+    console.log(allTexts);
+    
+})
