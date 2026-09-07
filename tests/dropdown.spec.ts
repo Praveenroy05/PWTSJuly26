@@ -90,7 +90,6 @@ test("Handling drop down developed using NON SELECT tag", async ({page})=>{
     await page.getByText("Blue", {exact:true}).nth(1).click()
     await page.getByText("Red", {exact:true}).nth(1).click()
 
-
 })
 
 // mouse operations
