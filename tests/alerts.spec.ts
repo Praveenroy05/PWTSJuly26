@@ -47,3 +47,5 @@ test("Handling alerts", async ({page})=>{
     await expect(page.locator("#promptResult")).toHaveText(`You entered ${prompt}`)
 
 })
+
+
