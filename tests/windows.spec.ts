@@ -17,7 +17,7 @@
 
 import {test, expect} from '@playwright/test'
 
-test("Handlimg multiple windows", async ({page})=>{
+test("Handling multiple windows", async ({page})=>{
     await page.goto("https://demo.automationtesting.in/Windows.html")
 
     // 2. wait for "popup" event to appear on the page without using await
@@ -47,5 +47,6 @@ test("Handlimg multiple windows", async ({page})=>{
     await expect(page.getByPlaceholder("Email id for Sign Up")).toBeVisible()
 
 
+    // download - event
 
 })
