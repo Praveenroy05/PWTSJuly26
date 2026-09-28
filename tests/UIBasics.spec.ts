@@ -96,6 +96,8 @@ test("Handling radio button and checkbox", async ({page})=>{
 
     const checboxEle = page.getByRole("checkbox")
     // count() - Returns the total number of elements that the locator is matching
+    await checboxEle.first().waitFor()
+    
     const count = await checboxEle.count()
 
     for(let i=0; i<count; i++){
