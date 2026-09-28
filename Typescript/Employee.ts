@@ -92,6 +92,42 @@ const emp3 = new Employee("John", 105, 29, 150000)
 emp3.displayInformation()
 
 
+// Inheritance - Acquiring the properties and methods from the parent class to the child class
+// extends
+// this - Represents current class object
+// super - Represents parent class object
+
+
+class Department extends Employee{
+    
+    dept : string
+
+    constructor(name:string, age:number, id:number, salary:number, deptid:string){
+        super(name, age, id, salary)
+        this.dept = deptid
+        // console.log(this.dept);
+        // console.log(deptid);   
+    }
+
+    displayEmployeeInfo(){
+        this.displayInformation()
+        console.log(this.dept)
+    }
+
+}
+
+
+const dept = new Department("Pushpa", 103, 26, 120000, "IT")
+dept.displayEmployeeInfo()
+
+
+
+const dept1 = new Department("John", 105, 29, 150000, "HR")
+dept1.displayEmployeeInfo()
+
+
+
+
 
 
 
