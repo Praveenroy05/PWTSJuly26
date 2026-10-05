@@ -19,6 +19,7 @@ export class LoginPage{
         this.password = this.page.getByPlaceholder("enter your passsword")
         this.loginBtn = this.page.locator("#login")
         this.homePageIdentifier = this.page.locator("[routerlink='/dashboard/']")
+        this.errorMessage = this.page.locator("#toast-container")
     }
 
     // Methods
@@ -32,9 +33,6 @@ export class LoginPage{
         await this.password.fill(password)
         await this.loginBtn.click()
     }
-
-
-
 
 }
 
