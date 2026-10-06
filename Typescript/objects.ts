@@ -68,6 +68,15 @@ obj.fun()
 
 
 
+import data from '../testdata/a.json'
+
+console.log(data.name)
+console.log(data.age)
+
+
+ //const data = { name: 'Rahul', age: 25 }
+
+ let  i = [{}, {}, {}]
 
 
 

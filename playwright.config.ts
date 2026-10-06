@@ -52,7 +52,7 @@ export default defineConfig({
     trace: 'on',
     screenshot: 'on',
     video : 'on',
-    headless : false,
+    headless : true,
     // launchOptions:{
     //   slowMo:1000
     // }

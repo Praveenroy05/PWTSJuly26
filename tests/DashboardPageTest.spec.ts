@@ -29,3 +29,11 @@ test("Select and view the details of the product", async ()=>{
     await expect(dashboardPage.viewPageProductPrice).toHaveText(dashboardPage.homePageProductPrice!)
 })
 
+
+
+// table
+// MCP - AI Agent
+// Calendar - 
+// Custom fixture
+// Data - driven
+// API test cases
