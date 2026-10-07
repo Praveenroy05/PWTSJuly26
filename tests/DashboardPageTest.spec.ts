@@ -19,7 +19,9 @@ test.beforeEach(async ({page})=>{
 })
 
 test("Select and add the product to the cart", async ()=>{
-    await dashboardPage.searchProduct(productName, 1)
+    await test.step("Search  and a product to the cart", async()=>{
+        await dashboardPage.searchProduct(productName, 1)
+    })
     await expect(dashboardPage.addToCartMsg).toHaveText("Product Added To Cart")
 })
 

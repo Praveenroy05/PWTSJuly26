@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "fullTest": "npx playwright test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Praveenroy05/PWTSJuly26.git"
@@ -18,9 +20,8 @@
   "homepage": "https://github.com/Praveenroy05/PWTSJuly26#readme",
   "devDependencies": {
     "@playwright/test": "^1.62.1",
-    "@types/node": "^26.2.0"
-  },
-  "dependencies": {
-    "dotenv": "^18.0.3"
+    "@types/node": "^26.6.4",
+    "dotenv": "^18.0.6",
+    "xlsx": "^0.18.5"
   }
 }

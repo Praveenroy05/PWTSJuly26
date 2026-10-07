@@ -10,6 +10,12 @@ import { defineConfig, devices } from '@playwright/test';
 
 // {key : value}
 
+// dotenv - is a library which helps us in loding the data from .env file
+// process.env  - Is a global object which reads the data from .env file
+
+console.log(process.env.CI);
+
+
 /*
 
 1. fullyParallel = true and workers = 1 - Test case will run in sequential order
