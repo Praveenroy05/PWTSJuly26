@@ -5,16 +5,25 @@ import { defineConfig, devices } from '@playwright/test';
  * https://github.com/motdotla/dotenv
  */
  import dotenv from 'dotenv';
-// import path from 'path';
+ import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 // {key : value}
 
-// dotenv - is a library which helps us in loding the data from .env file
+// dotenv - is a library which helps us in loading the data from .env file
 // process.env  - Is a global object which reads the data from .env file
 
-console.log(process.env.CI);
 
+const ENV_NAME = process.env.ENV || 'prod'
+
+
+dotenv.config({path: path.join(__dirname, "testdata", `${ENV_NAME}.env`)})
+
+// On powershell terminal use:
+// $env:ENV="stg"; npx playwright test  - To run all the test case by taking the data from stg.env file
+
+// On Command Prompt or Bash:
+// set ENV=qa&& npx playwright test - To run all the test case by taking the data from qa.env
 
 /*
 

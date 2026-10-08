@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "fullTest": "npx playwright test"
+    "fullTest": "npx playwright test",
+    "test:qa": "set ENV=qa&& npx playwright test",
+    "test:prod": "set ENV=prod&& npx playwright test",
+    "test:stg": "set ENV=stg&& npx playwright test",
+    "smokeTest:qa": "set ENV=qa&& npx playwright test -g @smoke",
+    "regresionTest": "npx playwright test -g @regression"
   },
   "repository": {
     "type": "git",
