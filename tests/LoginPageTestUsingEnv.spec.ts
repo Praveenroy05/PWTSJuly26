@@ -10,8 +10,12 @@ test.beforeEach(async ({page})=>{
 })
 
 test("@smoke @regression Login into application using correct credentials", async ()=>{
-    await lp.loginIntoApplication(process.env.email, process.env.password)
-    await expect(lp.homePageIdentifier).toBeVisible()
+    await  test.step("Login into application", async ()=>{
+        await lp.loginIntoApplication(process.env.email, process.env.password)
+    })
+    await test.step("Validate if the login is successful or not", async ()=>{
+        await expect(lp.homePageIdentifier).toBeVisible()
+    })
 })
 
 

@@ -14,14 +14,20 @@ test.beforeEach(async ({page})=>{
     await lp.launchURL(url)
 })
 
-test("Login into application using correct credentials",
-    {tag:['@smoke', '@regression']}, async ()=>{
-    await lp.loginIntoApplication(username, password)
-    await expect(lp.homePageIdentifier).toBeVisible()
-})
+test.describe.configure({mode:'serial', timeout: 10000, retries: 1})
 
-test("@regression Login into application using incorrect creds", async ()=>{
-    await lp.loginIntoApplication(username, incorrectPassword)
-    await expect(lp.errorMessage).toHaveText("Incorrect email or password.")
+test.describe("Login Page Test", async ()=>{
+
+    test("Login into application using correct credentials",
+        {tag:['@smoke', '@regression']}, async ()=>{
+        await lp.loginIntoApplication(username, password)
+        await expect(lp.homePageIdentifier).toBeVisible()
+    })
+
+    test("@regression Login into application using incorrect creds", async ()=>{
+        await lp.loginIntoApplication(username, incorrectPassword)
+        await expect(lp.errorMessage).toHaveText("Incorrect email or password.")
+    })
+
 })
 
