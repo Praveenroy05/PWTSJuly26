@@ -44,7 +44,6 @@ pipeline {
                 script {
                     def generateReport = input(
                         message: 'Playwright execution is complete. Generate the Allure report?',
-                        ok: 'Continue',
                         parameters: [booleanParam(defaultValue: true, name: 'Generate Allure report')]
                     )
 
